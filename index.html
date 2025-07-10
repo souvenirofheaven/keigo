@@ -471,7 +471,9 @@
         font-weight: bolder;
         writing-mode: vertical-rl;
         text-orientation: upright;
+        font-size: clamp(24px, 2vw, 50px);
       }
+
       .phrase-container-right {
         position: absolute;
         top: 50%;
@@ -498,9 +500,11 @@
       }
       .invictus {
         position: absolute;
-        top: -75px;
-        font-size: 270px;
+        /* top: -75px; */
+        top: clamp(-40px, -10vw, -75px);
+        /* font-size: 270px; */
         color: #484873;
+        font-size: clamp(80px, 15vw, 270px);
       }
       .center-img {
         z-index: 5;
@@ -640,16 +644,22 @@
           class="presentation-container"
           id="message"
         >
+          <p
+            class="long-presentation"
+            style="margin-bottom: 0px; padding-bottom: 0px"
+          >
+            Don’t Try to Understand Me
+          </p>
           <p class="long-presentation">
-            Don’t Try to Understand Me Don’t try to understand me because you wouldn’t understand, you wouldn’t understand how, being so big and so strong, I sometimes feel so small and so weak. Don’t
-            try to understand me, because you wouldn’t understand, you wouldn’t understand the way I live my days, so fully and aware of everything and everyone, and yet sometimes so distant, so
-            absent. Don’t try to understand me because you wouldn’t understand, how I can turn a single tear into poetry, how I draw strength from wounds and create fantasy out of nothing. Don’t try
-            to understand me because you wouldn’t understand, how, being so ambitious, I can live without ambitions, and how I can have everything while my hands are empty. Don’t try to understand it
-            because you wouldn’t understand, how I can need your company so much, while constantly escaping to my empty room. Don’t try to understand it because you wouldn’t understand, how I can
-            answer so many people’s questions yet find no answers to my own. Don’t try to understand me because you wouldn’t understand, my ability to make easy what is often so complicated, and how
-            easily I complicate the simplest things. That’s why you shouldn’t try to understand me. I don’t ask you to. And even if I seem to push you away, I’m asking for your company. Don’t try to
-            understand my formulas or my ways, much less this way that is so uniquely mine of seeing things and facing life. Don’t try to understand me, or try to understand it, because the funny
-            thing is… “sometimes I don’t understand it either.”
+            Don’t try to understand me because you wouldn’t understand, you wouldn’t understand how, being so big and so strong, I sometimes feel so small and so weak. Don’t try to understand me,
+            because you wouldn’t understand, you wouldn’t understand the way I live my days, so fully and aware of everything and everyone, and yet sometimes so distant, so absent. Don’t try to
+            understand me because you wouldn’t understand, how I can turn a single tear into poetry, how I draw strength from wounds and create fantasy out of nothing. Don’t try to understand me
+            because you wouldn’t understand, how, being so ambitious, I can live without ambitions, and how I can have everything while my hands are empty. Don’t try to understand it because you
+            wouldn’t understand, how I can need your company so much, while constantly escaping to my empty room. Don’t try to understand it because you wouldn’t understand, how I can answer so many
+            people’s questions yet find no answers to my own. Don’t try to understand me because you wouldn’t understand, my ability to make easy what is often so complicated, and how easily I
+            complicate the simplest things. That’s why you shouldn’t try to understand me. I don’t ask you to. And even if I seem to push you away, I’m asking for your company. Don’t try to understand
+            my formulas or my ways, much less this way that is so uniquely mine of seeing things and facing life. Don’t try to understand me, or try to understand it, because the funny thing is…
+            “sometimes I don’t understand it either.”
           </p>
         </div>
 
