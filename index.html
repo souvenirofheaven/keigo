@@ -481,6 +481,70 @@
         margin: 0px;
         color: whitesmoke;
       }
+      #kanji-container {
+        position: relative;
+        display: inline-block;
+        font-size: 80px;
+        font-weight: bold;
+        font-family: sans-serif;
+      }
+
+      #kanji {
+        animation: heartbeat 1s infinite;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        color: #ffffff;
+      }
+
+      .trail {
+        position: absolute;
+        color: red;
+        opacity: 0.6;
+        animation: trail-fade 1s forwards;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      #message {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        margin-top: 20px;
+        font-size: 24px;
+        font-family: sans-serif;
+      }
+
+      #message.show {
+        opacity: 1;
+      }
+
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.2);
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(1.1);
+        }
+      }
+
+      @keyframes trail-fade {
+        0% {
+          transform: scale(1);
+          opacity: 0.6;
+        }
+        100% {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
     </style>
   </head>
 
@@ -527,7 +591,13 @@
             <span class="id">16699</span>
           </div>
         </div>
-        <div class="presentation-container">
+        <div id="kanji-container">
+          <span id="kanji">強</span>
+        </div>
+        <div
+          class="presentation-container"
+          id="message"
+        >
           <p class="long-presentation">
             Don’t Try to Understand Me Don’t try to understand me because you wouldn’t understand, you wouldn’t understand how, being so big and so strong, I sometimes feel so small and so weak. Don’t
             try to understand me, because you wouldn’t understand, you wouldn’t understand the way I live my days, so fully and aware of everything and everyone, and yet sometimes so distant, so
@@ -869,6 +939,31 @@
 
       let anguloTotal = 0;
       girar();
+
+      const kanji = document.getElementById("kanji");
+      const container = document.getElementById("kanji-container");
+      const message = document.getElementById("message");
+
+      function createTrail() {
+        const trail = document.createElement("span");
+        trail.className = "trail";
+        trail.textContent = "強";
+
+        trail.style.left = `${kanji.offsetLeft}px`;
+        trail.style.top = `${kanji.offsetTop}px`;
+
+        container.appendChild(trail);
+
+        trail.addEventListener("animationend", () => {
+          trail.remove();
+        });
+      }
+
+      setInterval(createTrail, 1000);
+
+      kanji.addEventListener("click", () => {
+        message.classList.add("show");
+      });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
   </body>
