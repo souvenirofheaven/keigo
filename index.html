@@ -189,6 +189,48 @@
 
         pointer-events: none;
       }
+
+      /* Ajustar texto responsivo para long-presentation */
+      .long-presentation {
+        font-size: clamp(0.65rem, 2vw, 0.8rem);
+        line-height: 1.6;
+        padding: 1rem;
+        max-height: 40vh;
+        overflow-y: auto;
+        word-wrap: break-word;
+      }
+
+      /* Ajustar tamaño de usuario e ID responsivamente */
+      .username {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+      }
+
+      .profile .id {
+        font-size: clamp(0.7rem, 2vw, 0.9rem);
+      }
+
+      /* Imagen de perfil responsive dentro del panel fijo */
+      .profile img {
+        width: clamp(40px, 10vw, 60px);
+        height: clamp(40px, 10vw, 60px);
+      }
+
+      /* Kanji responsive sin perder su estilo */
+      #kanji {
+        font-size: clamp(50px, 12vw, 80px);
+      }
+
+      /* Texto de reproductor (cronómetro) */
+      .aCron {
+        font-size: clamp(0.7rem, 1.8vw, 0.9rem);
+      }
+
+      /* Contenedor del audio: evitar que se rompa en móviles */
+      .aWrap {
+        width: 100%;
+        max-width: 550px;
+        flex-wrap: wrap;
+      }
     </style>
     <style>
       /* (A) MATERIAL ICONS */
