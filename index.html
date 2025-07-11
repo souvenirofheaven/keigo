@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>keigo</title>
 
-    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
       rel="stylesheet"
@@ -33,7 +32,6 @@
     />
 
     <style>
-      /* ---------- Base layout ---------- */
       html,
       body {
         margin: 0;
@@ -72,7 +70,6 @@
         letter-spacing: 0.3rem;
       }
 
-      /* ---------- Landing panels ---------- */
       .landing {
         display: none;
         position: relative;
@@ -131,7 +128,6 @@
         transform: translateY(0);
       }
 
-      /* ---------- Typography ---------- */
       .arvo-regular {
         font-family: "Arvo", serif;
         font-weight: 400;
@@ -151,7 +147,6 @@
         font-style: italic;
       }
 
-      /* ---------- Responsive ---------- */
       @media (max-width: 768px) {
         .landing {
           flex-direction: column;
@@ -190,7 +185,6 @@
         pointer-events: none;
       }
 
-      /* Ajustar texto responsivo para long-presentation */
       .long-presentation {
         font-size: clamp(0.65rem, 2vw, 0.8rem);
         line-height: 1.6;
@@ -200,7 +194,6 @@
         word-wrap: break-word;
       }
 
-      /* Ajustar tamaño de usuario e ID responsivamente */
       .username {
         font-size: clamp(0.8rem, 2.5vw, 1rem);
       }
@@ -209,23 +202,19 @@
         font-size: clamp(0.7rem, 2vw, 0.9rem);
       }
 
-      /* Imagen de perfil responsive dentro del panel fijo */
       .profile img {
         width: clamp(40px, 10vw, 60px);
         height: clamp(40px, 10vw, 60px);
       }
 
-      /* Kanji responsive sin perder su estilo */
       #kanji {
         font-size: clamp(50px, 12vw, 80px);
       }
 
-      /* Texto de reproductor (cronómetro) */
       .aCron {
         font-size: clamp(0.7rem, 1.8vw, 0.9rem);
       }
 
-      /* Contenedor del audio: evitar que se rompa en móviles */
       .aWrap {
         width: 100%;
         max-width: 550px;
@@ -233,19 +222,16 @@
       }
     </style>
     <style>
-      /* (A) MATERIAL ICONS */
       .aWrap .svg-inline--fa {
         color: white !important;
       }
 
-      /* (B) WRAPPER */
       .aWrap {
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        /* allow buttons to wrap into another row on small screens */
-        /* flex-wrap: wrap; */
+
         width: 550px;
         padding: 10px 30px;
         margin: 5px 0;
@@ -259,7 +245,6 @@
         box-sizing: border-box;
       }
 
-      /* (C) PLAY/PAUSE BUTTON */
       .aPlay {
         padding: 0;
         margin: 0;
@@ -268,15 +253,12 @@
         cursor: pointer;
       }
 
-      /* (D) TIME */
       .aCron {
         font-size: 14px;
         color: #cbcbcb;
         margin: 0 10px;
       }
 
-      /* (E) RANGE SLIDERS */
-      /* (E1) HIDE DEFAULT */
       .aWrap input[type="range"] {
         appearance: none;
         border: none;
@@ -335,14 +317,12 @@
         appearance: none;
       }
 
-      /* (E2) CUSTOM SLIDER TRACK */
       .aWrap input[type="range"]::-webkit-slider-runnable-track {
         background: transparent;
         height: 6px;
         border-radius: 10px;
       }
 
-      /* (E3) CUSTOM SLIDER BUTTON */
       .aWrap input[type="range"]::-webkit-slider-thumb {
         width: 16px;
         height: 16px;
@@ -365,7 +345,6 @@
         margin-top: -5px;
       }
 
-      /* (F) VOLUME */
       .aVolIco {
         margin: 0 10px;
         cursor: pointer;
@@ -477,11 +456,9 @@
       .phrase-container-right {
         position: absolute;
         top: 50%;
-
         transform: translate(3%, -50%);
         background: black;
         font-family: "Courier New", Courier, monospace;
-
         bottom: 20px;
         right: 20px;
         color: #ffffff;
@@ -489,9 +466,12 @@
         border: 5px solid #000;
         padding: 10px;
         font-weight: bolder;
-        max-width: 300px;
-        height: 68px;
+        max-width: 233px;
+        height: auto;
         text-align: center;
+        font-size: clamp(10px, 2vw, 13px);
+        display: inline-table;
+        text-align: right;
       }
       .anton-regular {
         font-family: "Anton", sans-serif;
@@ -595,10 +575,8 @@
   </head>
 
   <body>
-    <!-- Snow canvas -->
     <canvas id="particles"></canvas>
 
-    <!-- Intro screen -->
     <div
       class="container"
       id="intro"
@@ -617,7 +595,6 @@
       </p>
     </div>
 
-    <!-- Landing panels -->
     <div
       class="landing"
       id="landing"
@@ -659,11 +636,10 @@
             people’s questions yet find no answers to my own. Don’t try to understand me because you wouldn’t understand, my ability to make easy what is often so complicated, and how easily I
             complicate the simplest things. That’s why you shouldn’t try to understand me. I don’t ask you to. And even if I seem to push you away, I’m asking for your company. Don’t try to understand
             my formulas or my ways, much less this way that is so uniquely mine of seeing things and facing life. Don’t try to understand me, or try to understand it, because the funny thing is…
-            “sometimes I don’t understand it either.”
+            “sometimes I don’t understand it either.”<br /><br /><br />
           </p>
         </div>
 
-        <!-- ─── left‑panel ────────────────────────────────────────────── -->
         <div class="player-container">
           <div
             class="aWrap"
@@ -704,7 +680,6 @@
             </div>
           </div>
         </div>
-        <!-- ───────────────────────────────────────────────────────────── -->
       </div>
       <div class="center-panel">
         <div class="vertical-text-left">強くありなさい</div>
@@ -723,24 +698,18 @@
     </div>
 
     <script>
-      /* -------------------------------------------------------------
-         Canvas & snowflake setup
-      ------------------------------------------------------------- */
       const canvas = document.getElementById("particles");
       const ctx = canvas.getContext("2d");
       let particles = [];
 
-      /* Mouse position (start at center to avoid jump) */
       let mouseX = window.innerWidth / 2;
       let mouseY = window.innerHeight / 2;
 
-      /* Update mouse position */
       window.addEventListener("mousemove", (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
       });
 
-      /* Keep canvas full‑screen */
       function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -748,7 +717,6 @@
       window.addEventListener("resize", resizeCanvas);
       resizeCanvas();
 
-      /* Generate flakes */
       function createParticles() {
         particles = [];
         for (let i = 0; i < 800; i++) {
@@ -761,7 +729,7 @@
             opacity: Math.random() * 0.5 + 0.3,
             rotation: Math.random() * 2 * Math.PI,
             rotationSpeed: (Math.random() - 0.5) * 0.02,
-            parallaxFactor: Math.random() * 0.6 + 0.2, // 0.2–0.8
+            parallaxFactor: Math.random() * 0.6 + 0.2,
           });
         }
       }
@@ -769,17 +737,14 @@
       function drawParticles() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        /* Parallax horizontal inverso (sin cambios) */
         const offsetX = (mouseX - canvas.width / 2) * 0.7;
 
-        /* Desplazamiento vertical SOLO cuando el ratón está por debajo del centro */
         const rawOffsetY = (mouseY - canvas.height / 2) * 0;
-        const offsetY = Math.max(rawOffsetY, 0); // ← nunca negativo
+        const offsetY = Math.max(rawOffsetY, 0);
 
         for (const p of particles) {
-          /*  ─── Dibujar ───  */
-          const drawX = p.x - offsetX * p.parallaxFactor; // inverso en X
-          const drawY = p.y + offsetY * p.parallaxFactor; // solo baja en Y
+          const drawX = p.x - offsetX * p.parallaxFactor;
+          const drawY = p.y + offsetY * p.parallaxFactor;
 
           ctx.save();
           ctx.translate(drawX, drawY);
@@ -790,12 +755,10 @@
           ctx.fill();
           ctx.restore();
 
-          /* Movimiento real de la nevada */
           p.x += p.dx;
           p.y += p.dy;
           p.rotation += p.rotationSpeed;
 
-          /* Reciclado de copos */
           if (p.x < -50 || p.y > canvas.height + 50) {
             if (Math.random() < 0.5) {
               p.x = canvas.width + Math.random() * 100;
@@ -809,9 +772,6 @@
         requestAnimationFrame(drawParticles);
       }
 
-      /* -------------------------------------------------------------
-         Intro → Landing transition
-      ------------------------------------------------------------- */
       function startSnowfall() {
         document.getElementById("intro").style.display = "none";
         const landing = document.getElementById("landing");
@@ -819,12 +779,11 @@
         const centerPanel = document.querySelector(".center-panel");
 
         landing.style.display = "flex";
-        /* Small delay for smoother CSS animation */
+
         setTimeout(() => {
           leftPanel.classList.add("slide-in");
           centerPanel.classList.add("reveal");
 
-          // 🔊 Reproducir la música después de la animación
           const firstAudioWrap = document.querySelector(".aWrap");
           if (firstAudioWrap && firstAudioWrap.audio) {
             firstAudioWrap.audio.play().catch((e) => {
@@ -834,18 +793,15 @@
         }, 50);
       }
 
-      /* Kick things off */
       createParticles();
       drawParticles();
 
       var timeString = (secs) => {
-        // (A1) HOURS, MINUTES, SECONDS
         let ss = Math.floor(secs),
           hh = Math.floor(ss / 3600),
           mm = Math.floor((ss - hh * 3600) / 60);
         ss = ss - hh * 3600 - mm * 60;
 
-        // (A2) RETURN FORMATTED TIME
         if (hh > 0) {
           mm = mm < 10 ? "0" + mm : mm;
         }
@@ -864,7 +820,6 @@
       }
 
       for (let i of document.querySelectorAll(".aWrap")) {
-        // (B) AUDIO + HTML SETUP + FLAGS
         i.audio = new Audio(encodeURI(i.dataset.src));
         (i.aPlay = i.querySelector(".aPlay")),
           (i.aPlayIco = i.querySelector(".aPlayIco")),
@@ -873,10 +828,8 @@
           (i.aSeek = i.querySelector(".aSeek")),
           (i.aVolume = i.querySelector(".aVolume")),
           (i.aVolIco = i.querySelector(".aVolIco"));
-        i.seeking = false; // user is dragging the seek bar
+        i.seeking = false;
 
-        // (C) PLAY & PAUSE
-        // (C1) CLICK TO PLAY/PAUSE
         i.aPlay.onclick = () => {
           if (i.audio.paused) {
             i.audio.play();
@@ -885,28 +838,21 @@
           }
         };
 
-        // (C2) SET PLAY/PAUSE ICON
         i.audio.onplay = () => (i.aPlayIco.innerHTML = '<i class="fa fa-pause"></i>');
         i.audio.onpause = () => (i.aPlayIco.innerHTML = '<i class="fa fa-play"></i>');
 
-        // (D) TRACK PROGRESS & SEEK TIME
-        // (D1) TRACK LOADING
         i.audio.onloadstart = () => {
           i.aNow.innerHTML = "Loading";
           i.aTime.innerHTML = "";
         };
 
-        // (D2) ON META LOADED
         i.audio.onloadedmetadata = () => {
-          // (D2-1) INIT SET TRACK TIME
           i.aNow.innerHTML = timeString(0);
           i.aTime.innerHTML = timeString(i.audio.duration);
 
-          // (D2-2) SET SEEK BAR MAX TIME
           i.aSeek.max = Math.floor(i.audio.duration);
 
-          // (D2-3) USER CHANGE SEEK BAR TIME
-          i.aSeek.oninput = () => (i.seeking = true); // prevents clash with (d2-4)
+          i.aSeek.oninput = () => (i.seeking = true);
           i.aSeek.onchange = () => {
             i.audio.currentTime = i.aSeek.value;
             if (!i.audio.paused) {
@@ -915,7 +861,6 @@
             i.seeking = false;
           };
 
-          // (D2-4) UPDATE SEEK BAR ON PLAYING
           i.audio.ontimeupdate = () => {
             if (!i.seeking) {
               i.aSeek.value = Math.floor(i.audio.currentTime);
@@ -931,7 +876,6 @@
           };
         };
 
-        // (E) VOLUME
         i.aVolIco.onclick = () => {
           i.audio.volume = i.audio.volume == 0 ? 1 : 0;
           i.aVolume.value = i.audio.volume;
@@ -947,7 +891,6 @@
           i.aVolIco.innerHTML = i.aVolume.value == 0 ? '<i class="fa fa-volume-off"></i>' : '<i class="fa fa-volume-up"></i>';
         };
 
-        // (F) ENABLE/DISABLE CONTROLS
         i.audio.oncanplaythrough = () => {
           i.aPlay.disabled = false;
           i.aVolume.disabled = false;
@@ -975,16 +918,12 @@
       const copo = document.querySelector(".copo");
 
       function girar() {
-        // Dirección aleatoria: sentido horario o antihorario
         const sentido = Math.random() < 0.5 ? 1 : -1;
 
-        // Ángulo aleatorio entre 90 y 360 grados
         const angulo = sentido * (90 + Math.random() * 270);
 
-        // Aplicar la rotación acumulativa
         copo.style.transform = `rotate(${(anguloTotal += angulo)}deg)`;
 
-        // Llamar otra vez después de un intervalo aleatorio (3 a 6 segundos)
         const tiempo = 3000 + Math.random() * 3000;
         setTimeout(girar, tiempo);
       }
